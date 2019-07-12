@@ -61,26 +61,32 @@
     <Compile Include="AddTopic.xaml.cs">
       <DependentUpon>AddTopic.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Breadcrum.xaml.cs">
-      <DependentUpon>Breadcrum.xaml</DependentUpon>
+    <Compile Include="ManageQuestion.xaml.cs">
+      <DependentUpon>ManageQuestion.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IObservableCollection.cs" />
     <Compile Include="ManageQuestions.cs" />
     <Compile Include="Question.cs" />
+    <Compile Include="QuestionDetail.xaml.cs">
+      <DependentUpon>QuestionDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Student.xaml.cs">
+      <DependentUpon>Student.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCheckIt.xaml.cs">
+      <DependentUpon>StudentCheckIt.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Topic.cs" />
-    <Compile Include="ViewResult.cs" />
+    <Compile Include="TopicDetail.xaml.cs">
+      <DependentUpon>TopicDetail.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddQuestion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddTopic.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Breadcrum.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -97,7 +103,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ManageQuestion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuestionDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentCheckIt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TopicDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -127,6 +153,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\Hamburger_icon.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\Back-Arrow-Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

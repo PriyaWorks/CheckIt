@@ -21,47 +21,65 @@ namespace CheckIt
     /// </summary>
     public partial class AddQuestion : Window
     {
-        public AddQuestion()
+        public string topicid = "";
+
+        public AddQuestion(string val)
         {
-            InitializeComponent();
+            InitializeComponent( );
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            topicid = val;
         }
+
+       
 
         private void Btn_Cancel_Click(object sender, RoutedEventArgs e)
         {
-
+            var manageQuestion = new ManageQuestion();
+            manageQuestion.Show();
+            this.Close();
         }
 
         private void Btn_SaveQuestion_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                var data = DbUtility.ReadXml<ObservableCollection<Question>>("Question.xml");
+                var data = DbUtility.ReadXml<ObservableCollection<Question>>("Questions.xml");
                 var question = new ObservableCollection<Question>();
                 Question qs = new Question();
-                qs.TopicId = "text";
+                qs.topicId = topicid;
                 XmlDocument doc = new XmlDocument();
-                doc.Load("Question.xml");
+                doc.Load("Questions.xml");
                 int count = 1;
                 foreach (XmlNode x in doc.SelectNodes("ArrayOfQuestion/Question"))
                 {
                     count = count + 1;
                 }
                 string questionid = Convert.ToString(count);
-                qs.QuestionId = questionid;
-                qs.QuestionDesc = Question.Text;
-                qs.Option1 = OptionA.Text;
-                qs.Option2 = OptionB.Text;
-                qs.Option3 = OptionC.Text;
-                qs.Option4 = OptionD.Text;
-                qs.CorrectAnswer = CorrectAnswer.Text;
+                qs.questionId = questionid;
+                qs.questionDesc = QuestionDesciption.Text;
+                qs.optionA = OptionA.Text;
+                qs.optionB = OptionB.Text;
+                qs.optionC = OptionC.Text;
+                qs.optionD = OptionD.Text;
+                qs.corectionAnswer = CorrectAnswer.Text;
+               
+                Random random = new Random();
+                var code = Convert.ToString(random.Next(999, 10000));
+                qs.questionCode = code;
+
+                if (string.IsNullOrEmpty(QuestionDesciption.Text) || string.IsNullOrEmpty(OptionA.Text) || string.IsNullOrEmpty(OptionB.Text) || string.IsNullOrEmpty(OptionC.Text) || string.IsNullOrEmpty(OptionD.Text) )
+                {
+                    MessageBox.Show("Please enter the vlaues in all fields");
+                }
+                else
+                
                 {
                     data.Add(qs);
-                    DbUtility.WriteXml<ObservableCollection<Question>>(data, "Question.xml");
+                    DbUtility.WriteXml<ObservableCollection<Question>>(data, "Questions.xml");
                     MessageBox.Show("Question successfully added");
 
-                    var gotomain = new MainWindow();
-                    gotomain.Show();
+                    var manageQuestion = new ManageQuestion();
+                    manageQuestion.Show();
                     this.Close();
                 }
             }

@@ -33,23 +33,28 @@ namespace CheckIt
         {
             try
             {
-                var data = DbUtility.ReadXml<ObservableCollection<Topic>>("Topic.xml");
+                var data = DbUtility.ReadXml<ObservableCollection<Topic>>("Topics.xml");
                 var topic = new ObservableCollection<Topic>();
                 Topic tn = new Topic();
                 XmlDocument doc = new XmlDocument();
-                doc.Load("Topic.xml");
+                doc.Load("Topics.xml");
                 int count = 1;
                 foreach (XmlNode xn in doc.SelectNodes("ArrayOfTopic/Topic"))
                 {
                     count = count + 1;
                 }
                 string topicid = Convert.ToString(count);
-                tn.TopicId = topicid;
-                tn.TopicName = TopicName.Text;
+                tn.topicId = topicid;
+                tn.topicName = TopicName.Text;
 
+                if (string.IsNullOrEmpty(TopicName.Text))
+                {
+                    MessageBox.Show("Please enter the topic name");
+                }
+                else
                 {
                     data.Add(tn);
-                    DbUtility.WriteXml<ObservableCollection<Topic>>(data, "Topic.xml");
+                    DbUtility.WriteXml<ObservableCollection<Topic>>(data, "Topics.xml");
                     MessageBox.Show("Topic name successfully added");
 
                     var gobacktomain = new Settings();

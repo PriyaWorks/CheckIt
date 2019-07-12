@@ -6,77 +6,85 @@
         xmlns:local="clr-namespace:CheckIt"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Title="Settings" Height="700" Width="400">
+        Title="CheckIt" Height="700" Width="400">
     <Grid>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" 
-                   Height="50" Stroke="Black" 
-                   VerticalAlignment="Top" Width="400"/>
-        <Label FontFamily ="Arial" FontSize="26" Content="CheckIT" 
-               HorizontalAlignment="Left" Margin="132,0,0,0" 
-               VerticalAlignment="Top" Height="50" Width="129"/>
-        <Label FontFamily ="Arial" FontSize="22" 
-               Content="Settings" 
-               HorizontalAlignment="Left" Margin="30,55,0,0" 
-               VerticalAlignment="Top" Height="50" Width="129"/>
+        <Menu FontFamily ="Arial" FontSize="14"  VerticalAlignment="Top" Margin="0,0,-0.4,0" Padding="5"
+               Height="50" Focusable="True" FocusVisualStyle="{x:Null}" Grid.ColumnSpan="2">
+            <MenuItem Height="40" Width="50"  >
+                <MenuItem.Icon >
+                    <Image Source="image/Hamburger_icon.svg.png"/>
+                </MenuItem.Icon>
+                <MenuItem Header="Manage Questions" Padding="5"
+                          HorizontalAlignment="Left" 
+                          Width="280" x:Name="ManageQuestions"
+                          Click="MenuItem_ManageQuestions_Click" 
+                          Height="30" Margin="0,0,-120.2,0"/>
+                <MenuItem Header="Setting" HorizontalAlignment="Left" 
+                          Width="155" x:Name="Setting" Padding="5"
+                          Click="MenuItem_Setting_Click" Margin="0,0,-15.2,0"/>
+                <MenuItem Header="View Result" HorizontalAlignment="Left" 
+                          Width="180" x:Name="ViewResult" Padding="5"
+                          Click="MenuItem_ViewResult_Click" Margin="0,0,-45.2,0"/>
+            </MenuItem>
+        </Menu>
+        <Label FontFamily ="Arial" FontSize="24" Content="CheckIT" 
+               HorizontalAlignment="Left" Margin="132,0,0,0" Padding="10"
+               VerticalAlignment="Top" Height="50" Width="129" Grid.ColumnSpan="2"/>
+        <Label FontFamily ="Arial" FontSize="20"  
+               Content="Settings" Padding="10"
+               HorizontalAlignment="Left" Margin="10,55,0,0" 
+               VerticalAlignment="Top" Height="50" Width="109"/>
 
         <Label FontFamily ="Arial" FontSize="16" 
-               Content="Default Time:" 
+               Content="Question Time:" Padding="10"
                HorizontalAlignment="Left" 
-               Margin="30,110,0,0" 
-               VerticalAlignment="Top" Width="109"/>
+               Margin="10,126,0,0" 
+               VerticalAlignment="Top" Width="129"/>
         <Label FontFamily ="Arial" FontSize="16" 
-               Content="Min" HorizontalAlignment="Left"
-               Margin="173,110,0,0" VerticalAlignment="Top"
-               Height="28" Width="80"/>
+               Padding="10"
+               Content="Minutes" HorizontalAlignment="Left"
+               Margin="195,126,0,0" VerticalAlignment="Top"
+               Height="39" Width="91"/>
 
-        <Label FontFamily ="Arial" FontSize="16" 
-               FontWeight="ExtraBold"  Content=":" 
-               HorizontalAlignment="Left" 
-               Margin="206,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.637,1.111"/>
-        <TextBox FontFamily ="Arial" FontSize="16" 
-                 HorizontalAlignment="Left" Height="23" 
-                 Margin="139,111,0,0" TextWrapping="Wrap"  
-                 VerticalAlignment="Top" Width="29" 
-                 RenderTransformOrigin="0.598,-0.478"/>
-        <TextBox FontFamily ="Arial" FontSize="16" 
-                 HorizontalAlignment="Left" Height="23" 
-                 Margin="222,111,0,0" TextWrapping="Wrap"  
-                 VerticalAlignment="Top" Width="31" RenderTransformOrigin="0.445,2.009"/>
-        <Label FontFamily ="Arial" FontSize="16" 
-               Content="Sec" HorizontalAlignment="Left"
-               Margin="258,110,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.484,1.604"/>
-        <Label FontFamily ="Arial" FontSize="16" 
-               Content="Topic Name" HorizontalAlignment="Left"
-               Margin="30,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.484,1.604"/>
+        <TextBox FontFamily ="Arial" FontSize="16" Padding="10"
+                 HorizontalAlignment="Left" Height="30" 
+                 Margin="139,131,0,0" TextWrapping="Wrap"  
+                 VerticalAlignment="Top" Width="56" RenderTransformOrigin="0.445,2.009"/>
 
-        <ListBox Name="TopicNames" HorizontalContentAlignment="Stretch" Margin="30,215,38.6,80.4">
+        <Label FontFamily ="Arial" FontSize="20" Padding="10"
+               Content="Topics" HorizontalAlignment="Left"
+               Margin="10,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.484,1.604" Width="85"/>
+
+        <ListBox Name="TopicNames" Padding="10"
+                 HorizontalContentAlignment="Stretch" 
+                 Margin="20,235,23.6,85.4"
+                 SelectionChanged="TopicNames_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="0,2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition  Width="50" 
-                                               SharedSizeGroup="Column1"/>
-                            <ColumnDefinition Width="Auto" SharedSizeGroup="Column2"/>
+                           <ColumnDefinition Width="Auto" SharedSizeGroup="Column1"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock FontFamily ="arial" FontSize="16" Grid.Column="0" Text="{Binding TopicId}" />
-                        <TextBlock TextWrapping="Wrap"  FontFamily ="arial" FontSize="16" Grid.Column="1" Text="{Binding TopicName}" />
+
+                        <TextBlock TextWrapping="Wrap"  FontFamily ="arial" FontSize="16" Grid.Column="1" Text="{Binding topicName}" />
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
 
         <Button Name="Btn_AddTopic" Content="Add Topic" 
-                HorizontalAlignment="Left" 
-                Margin="173,611,0,0" 
+                HorizontalAlignment="Left" Padding="5"
+                Margin="185,605,0,0" FontFamily="Arial" FontSize="16"
                 VerticalAlignment="Top"
-                Width="75" Click="Btn_AddTopic_Click" 
+                Width="86" Click="Btn_AddTopic_Click" 
                 RenderTransformOrigin="0.347,1.1" 
-                Height="29"/>
-        <Button Name="Btn_DeleteTopic" Content="Delete Topic" 
+                Height="29" />
+        <Button Name="Btn_cancelWin" Padding="5"
+                Content="Cancel" FontFamily="Arial" FontSize="16"
                 HorizontalAlignment="Left" 
-                Margin="276,611,0,0" 
+                Margin="286,605,0,0" 
                 VerticalAlignment="Top"
                 Width="79" Height="29"
-                Click="Btn_DeleteTopic_Click"/>
+                Click="Btn_cancelWin_Click"/>
     </Grid>
 </Window>

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\pc\source\repos\CheckIt\CheckIt\App.xaml
-51236264753
+9-1748269079
 
-16927750025
+18-1999856453
 13-1505183044
-AddQuestion.xaml;AddTopic.xaml;Breadcrum.xaml;MainWindow.xaml;Settings.xaml;
+AddQuestion.xaml;AddTopic.xaml;MainWindow.xaml;ManageQuestion.xaml;QuestionDetail.xaml;Settings.xaml;Student.xaml;StudentCheckIt.xaml;TopicDetail.xaml;
 
-True
+False
 

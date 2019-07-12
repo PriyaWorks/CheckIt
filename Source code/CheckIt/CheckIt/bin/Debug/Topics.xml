@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfTopic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Topic>
+    <topicId>2</topicId>
+    <topicName>Presentation of Information</topicName>
+  </Topic>
+  <Topic>
+    <topicId>7</topicId>
+    <topicName>qwerty</topicName>
+  </Topic>
+  <Topic>
+    <topicId>5</topicId>
+    <topicName>Dialouge Principle</topicName>
+  </Topic>
+</ArrayOfTopic>

@@ -45,10 +45,6 @@ namespace CheckIt
 
         }
 
-        internal static void WriteXml<T>(ObservableCollection<Question> ques, string v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
 

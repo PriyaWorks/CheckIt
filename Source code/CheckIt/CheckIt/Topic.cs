@@ -8,7 +8,8 @@ namespace CheckIt
 {
     public class Topic
     {
-        public string TopicId { get; set; }
-        public string TopicName { get; set; }
+        
+        public string topicId { get; set; }
+        public string topicName { get; set; }
     }
 }

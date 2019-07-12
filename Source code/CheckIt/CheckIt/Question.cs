@@ -8,15 +8,15 @@ namespace CheckIt
 {
     public class Question
     {
-        public string QuestionId { get; set; }
-        public string QuestionDesc { get; set; }
-        public string TopicId { get; set; }
-        public string Option1 { get; set; }
-        public string Option2 { get; set; }
-        public string Option3 { get; set; }
-        public string Option4 { get; set; }
-        public string CorrectAnswer { get; set; }
-        
-              
+        public string topicId { get; set; }
+        public string questionId { get; set; }
+        public string questionDesc { get; set; }
+        public string optionA { get; set; }
+        public string optionB { get; set; }
+        public string optionC { get; set; }
+        public string optionD { get; set; }
+        public string corectionAnswer { get; set; }
+        public string questionCode { get; set; }
     }
+
 }
