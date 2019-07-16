@@ -24,7 +24,7 @@
                 <Label Margin="5,20,5,0" Content="Enter the Question Code to start CheckIt:" 
                                FontSize="20" FontFamily="Arial" />
                 <TextBox MinWidth="150" Margin="5,8,5,0" Padding="3" HorizontalAlignment="Center" 
-                                VerticalAlignment="Center" x:Name="InputTextBox"
+                                VerticalAlignment="Center" Name="InputTextBox"
                          Height="30"/>
                 <StackPanel Orientation="Horizontal"
                                     HorizontalAlignment="Center">

@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CheckIt"
         mc:Ignorable="d"
-        Title="TopicDetail" Height="216.4" Width="400">
-    <Grid>
+        Title="TopicDetail" Height="201.4" Width="400">
+    <Grid RenderTransformOrigin="0.546,0.378">
         <StackPanel Name="stk_TopicDetails" 
-                    Margin="0,0,-0.4,110">
+                    Margin="0,0,-0.4,87">
             <Label FontFamily ="Arial" Padding="5"
                    FontSize="16" Content="Topic:" 
                    HorizontalAlignment="Left" 
-                   Margin="15,20,0,10" 
+                   Margin="12,30,0,10" 
                    VerticalAlignment="Top" Height="30" RenderTransformOrigin="0.484,0.833"/>
             <TextBox x:Name="TopicName" 
                      FontFamily ="Arial" 
                      FontSize="16" Padding="5"
                      HorizontalAlignment="Left" 
                      Height="40" TextWrapping="Wrap" 
-                     Text="{Binding Path=topicName}" 
+                     Text="{Binding topicName}" 
                      VerticalAlignment="Top" 
-                     Margin="89,-32,-78.6,0" Width="284"/>
+                     Margin="71,-40,0,0" Width="290"/>
             <TextBox x:Name="Topicid" FontFamily ="Arial" 
                      FontSize="16" Padding="10"
                      HorizontalAlignment="Left" 
@@ -34,15 +34,15 @@
         </StackPanel>
         <Button Name="Btn_UpdateTopic" Content="Update" 
                 HorizontalAlignment="Left" 
-                Margin="161,111,0,0" FontFamily ="Arial" 
-                     FontSize="16" Padding="10"
+                Margin="160,90,0,0" FontFamily ="Arial" 
+                     FontSize="16" Padding="5"
                 VerticalAlignment="Top" Height="40"
-                Width="90"  
+                Width="90" BorderBrush="White" Background="#448AFF"
                 Click="Btn_UpdateTopic_Click"/>
         <Button Name="Btn_DeleteTopic" Content="Delete" 
                 HorizontalAlignment="Left" FontFamily ="Arial" 
-                     FontSize="16" Padding="10"
-                Margin="275,111,0,0" 
+                     FontSize="16" Padding="5"
+                Margin="270,90,0,0" BorderBrush="White" Background="#448AFF"
                 VerticalAlignment="Top" Width="90" Height="40"
                 Click="Btn_DeleteTopic_Click"/>
     </Grid>

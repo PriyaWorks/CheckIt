@@ -29,3 +29,39 @@ C:\Users\pc\source\repos\CheckIt\CheckIt\obj\Debug\Student.g.cs
 C:\Users\pc\source\repos\CheckIt\CheckIt\obj\Debug\Student.baml
 C:\Users\pc\source\repos\CheckIt\CheckIt\obj\Debug\StudentCheckIt.g.cs
 C:\Users\pc\source\repos\CheckIt\CheckIt\obj\Debug\StudentCheckIt.baml
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\bin\Debug\CheckIt.exe.config
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\bin\Debug\CheckIt.exe
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\bin\Debug\CheckIt.pdb
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.xml
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\AddQuestion.g.cs
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\AddTopic.g.cs
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\MainWindow.g.cs
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\ManageQuestion.g.cs
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\QuestionDetail.g.cs
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\Settings.g.cs
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\Student.g.cs
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\StudentCheckIt.g.cs
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\TopicDetail.g.cs
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\ViewResult.g.cs
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\App.g.cs
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\CheckIt_MarkupCompile.cache
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\CheckIt_MarkupCompile.lref
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\AddQuestion.baml
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\AddTopic.baml
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\MainWindow.baml
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\ManageQuestion.baml
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\QuestionDetail.baml
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\Settings.baml
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\Student.baml
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\StudentCheckIt.baml
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\TopicDetail.baml
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\ViewResult.baml
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\CheckIt.g.resources
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\CheckIt.Properties.Resources.resources
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\CheckIt.csproj.GenerateResource.cache
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\CheckIt.csproj.CoreCompileInputs.cache
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\CheckIt.csproj.CopyComplete
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\CheckIt.exe
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\CheckIt.pdb
+F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\CheckIt.csprojAssemblyReference.cache

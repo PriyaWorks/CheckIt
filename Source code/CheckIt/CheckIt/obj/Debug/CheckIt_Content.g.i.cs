@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/back-arrow-icon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/mobile-menu-icon.png")]
 
 

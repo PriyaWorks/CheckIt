@@ -22,6 +22,8 @@ namespace CheckIt
     /// </summary>
     public partial class QuestionDetail : Window
     {
+        string questioncode;
+        string topicid;
         public string questionid;
 
         public QuestionDetail(string id)
@@ -37,17 +39,30 @@ namespace CheckIt
             stk_QuestionDetails.DataContext = Questiondetails;
         }
 
+        
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            /*List<string> data = new List<string>();
-
-            XmlDocument docum = new XmlDocument();
-            docum.Load("Topics.xml");
-            foreach (XmlNode x in docum.SelectNodes("ArrayOfTopic/Topic"))
+            var data = DbUtility.ReadXml<ObservableCollection<Question>>("Questions.xml");
+            var Questions = from sn in data where sn.questionId.Equals(questionid) select sn;
             {
-                data.Add(x.SelectSingleNode("topicName").InnerText);
-            }*/
-            
+                stk_QuestionDetails.DataContext = Questions;
+            }
+            XmlDocument xdocum = new XmlDocument();
+            xdocum.Load("Questions.xml");
+            foreach (XmlNode x in xdocum.SelectNodes("ArrayOfQuestion/Question"))
+                if (x.SelectSingleNode("questionId").InnerText == questionid)
+                {
+                    string topicids = x.SelectSingleNode("topicId").InnerText;
+                    int topicidas = Convert.ToInt32(topicids) + 1;
+                    topicid = Convert.ToString(topicidas);
+
+                }
+
+            var topicdata = DbUtility.ReadXml<ObservableCollection<Topic>>("Topics.xml");
+            var topic = from tn in topicdata where tn.topicId.Equals(topicid) select tn;
+            {
+                stk_TopicName.DataContext = topic;
+            }
         }
 
         private void Btn_SaveQuestion_Click(object sender, RoutedEventArgs e)
@@ -60,7 +75,10 @@ namespace CheckIt
             qs.optionB = OptionB.Text;
             qs.optionC = OptionC.Text;
             qs.optionD = OptionD.Text;
-
+            qs.optionAStatus = Convert.ToString(Chbx_A.IsChecked);
+            qs.optionBStatus = Convert.ToString(Chbx_B.IsChecked);
+            qs.optionCStatus = Convert.ToString(Chbx_C.IsChecked);
+            qs.optionDStatus = Convert.ToString(Chbx_D.IsChecked);
             DbUtility.WriteXml<ObservableCollection<Question>>(pro, "Questions.xml");
             MessageBox.Show("Question Successfully Updated");
             var manageQuestion = new ManageQuestion();

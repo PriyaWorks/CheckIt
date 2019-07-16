@@ -53,7 +53,7 @@ namespace CheckIt
                 MessageBox.Show("Topic Successfully Updated");
                 var settings = new Settings();
                 settings.Show();
-                this.Close();
+                
             //}
         }
 
@@ -73,13 +73,13 @@ namespace CheckIt
                         }
                     var settings = new Settings();
                     settings.Show();
-                    this.Close();
+                   
                     break;
 
                 case MessageBoxResult.No:
                     var setting = new Settings();
                     setting.Show();
-                    this.Close();
+                    
                     break;
 
             }

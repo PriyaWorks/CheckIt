@@ -23,25 +23,13 @@ namespace CheckIt
         public Student()
         {
             InitializeComponent();
+            
         }
 
         
         private void Btn_Continue_Click(object sender, RoutedEventArgs e)
         {
-            /* InputBox.Visibility = System.Windows.Visibility.Collapsed;
-
-             String questioncode = InputTextBox.Text;
-             InputTextBox.Text = String.Empty;
-
-
-             var questiondata = DbUtility.ReadXml<ObservableCollection<Question>>("Questions.xml");
-             var Questiondetails = from s in questiondata where s.questionCode.Equals(questioncode) select s;
-
-             stk_QuestionDetails.DataContext = Questiondetails;*/
-
-            var quizpage = new StudentCheckIt();
-            quizpage.Show();
-            this.Close();
+           
         }
     }
 }

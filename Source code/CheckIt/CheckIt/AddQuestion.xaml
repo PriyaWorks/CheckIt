@@ -5,130 +5,135 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CheckIt"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        
         Title="CheckIt" Height="700" Width="400">
     <Grid>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" 
-                   Height="50" Stroke="Black" 
+        <Rectangle Fill="#448AFF" HorizontalAlignment="Left" 
+                   Height="50" Stroke="White" 
                    VerticalAlignment="Top" Width="400"/>
-        <Label FontFamily ="Arial" FontSize="26" Content="CheckIT" 
-               HorizontalAlignment="Left" Margin="132,0,0,0" 
+        <Label FontFamily ="Arial" FontSize="26" Content="CheckIT" Padding="10"
+               HorizontalAlignment="Left" Margin="132,0,0,0" Foreground="White"
                VerticalAlignment="Top" Height="50" Width="129"/>
-        <Label FontFamily ="Arial" FontSize="22" 
+        <Label FontFamily ="Arial" FontSize="20" 
                Content="Add Question" 
-               HorizontalAlignment="Left" Margin="10,50,0,0" 
-               VerticalAlignment="Top" Height="35" Width="150"/>
-        
-        <Label FontFamily ="Arial" FontSize="16" 
-               Content="Topic:" HorizontalAlignment="Left" 
-               Margin="10,108,0,0" VerticalAlignment="Top" 
-               Width="106"/>
+               HorizontalAlignment="Left" Margin="10,65,0,0" 
+               VerticalAlignment="Top" Height="35" Width="170"/>
+
+        <Label FontFamily ="Arial" FontSize="20" 
+               Content="Topic:" 
+               HorizontalAlignment="Left" Margin="10,110,0,0" 
+               VerticalAlignment="Top" Height="35" Width="70" RenderTransformOrigin="0.506,1.143"/>
+
         <StackPanel Name="stk_TopicName" 
-                    HorizontalAlignment="Left" Height="28"
-                    Margin="65,108,0,0" VerticalAlignment="Top" 
+                    HorizontalAlignment="Left" Height="30" 
+                    Margin="75,110,0,0" VerticalAlignment="Top" 
                     Width="248">
             <TextBlock FontFamily ="Arial" FontSize="16" Padding="5"
-                       Text="{Binding topicName}" Height="30"/>
+                        Height="30" Text="{Binding topicName}">
+
+            </TextBlock>
         </StackPanel>
 
-        <TextBox FontFamily="Arial" FontSize="16" TextWrapping="Wrap"
-                 Margin="10,150,20.6,430.4" Padding="5" Name="QuestionDesciption">
-            <TextBox.Style>
-                <Style xmlns:sys="clr-namespace:System;assembly=mscorlib" TargetType="TextBox">
-                    <Style.Resources>
-                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
-                            <VisualBrush.Visual>
-                                <Label Content="Enter Question Here..."></Label>
-                            </VisualBrush.Visual>
-                        </VisualBrush>
-                    </Style.Resources>
-                    <Style.Triggers>
-                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
-                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}"></Setter>
-                        </Trigger>
-                        <Trigger Property="Text" Value="{x:Null}">
-                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}"></Setter>
-                        </Trigger>
-                        <Trigger Property="IsKeyboardFocused" Value="True">
-                            <Setter Property="Background" Value="White"></Setter>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </TextBox.Style>
-        </TextBox>
+        <StackPanel Name="stk_QuestionDetails" Margin="0,180,-0.4,95.4">
+            <TextBox FontFamily="Arial" FontSize="16"
+                 Margin="15,0,15,0" Padding="5" Name="QuestionDesciption"
+                 TextWrapping="Wrap"   Height="145"               
+                     VerticalAlignment="Top">
+                <TextBox.Style>
+                    <Style xmlns:sys="clr-namespace:System;assembly=mscorlib" TargetType="TextBox">
+                        <Style.Resources>
+                            <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                <VisualBrush.Visual>
+                                    <Label Content="Enter Question Here..."></Label>
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Style.Resources>
+                        <Style.Triggers>
+                            <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}"></Setter>
+                            </Trigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter Property="Background" Value="{StaticResource CueBannerBrush}"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="Background" Value="White"></Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
 
-        <Label Content="A:" FontFamily ="Arial" 
-               FontSize="16" HorizontalAlignment="Left" 
-               Margin="40,275,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="" Name="Cbx_A" 
+            <Label Content="A" HorizontalAlignment="Left" VerticalAlignment="Top"
+                   FontFamily="Arial" FontSize="16" Height="30" Margin="40,20,0,0"/>
+
+            <CheckBox Content="" Name="Chbx_A" IsChecked="False"
                   HorizontalAlignment="Left" 
-                  Margin="16,281,0,0" 
+                  Margin="15,-22,0,0" 
                   VerticalAlignment="Top" Height="23"/>
+            <TextBox Name="OptionA" FontFamily ="Arial" 
+                 FontSize="16" HorizontalAlignment="Left" 
+                 Height="35" Margin="71,-30,0,0" Padding="5"
+                 TextWrapping="Wrap" Text="{Binding Path=optionA}"
+                 VerticalAlignment="Top" Width="279"/>
 
-        <Label Content="B:" FontFamily ="Arial" 
+            <Label Content="B:" FontFamily ="Arial" 
                FontSize="16" HorizontalAlignment="Left" 
-               Margin="41,335,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="" Name="Cbx_B" 
+               Margin="40,20,0,0" VerticalAlignment="Top"/>
+            <CheckBox Content="" x:Name="Chbx_B" IsChecked="False"
                   HorizontalAlignment="Left" 
-                  Margin="16,342,0,0" VerticalAlignment="Top" 
-                  Height="23"/>
-        <TextBox Name="OptionA" FontFamily ="Arial" 
-                 FontSize="16" HorizontalAlignment="Left" 
-                 Height="35" Margin="71,275,0,0" 
-                 TextWrapping="Wrap" 
-                 VerticalAlignment="Top" Width="279"/>
-        <TextBox Name="OptionB" FontFamily ="Arial" 
-                 FontSize="16" HorizontalAlignment="Left"
-                 Height="35" Margin="71,335,0,0"
-                 TextWrapping="Wrap" 
-                 VerticalAlignment="Top" Width="279"/>
-        <Label FontFamily ="Arial" FontSize="16" 
-               Content="C:" HorizontalAlignment="Left" 
-               Margin="41,395,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="" Name="Cbx_C" 
-                  HorizontalAlignment="Left" 
-                  Margin="16,402,0,0" VerticalAlignment="Top" 
+                  Margin="15,-22,0,0" VerticalAlignment="Top" 
                   Height="23"/>
 
-        <Label FontFamily ="Arial" FontSize="16" 
-               Content="D:" HorizontalAlignment="Left" 
-               Margin="41,456,0,0" VerticalAlignment="Top" 
-               RenderTransformOrigin="1.188,0.486"/>
+            <TextBox Name="OptionB" FontFamily ="Arial" 
+                     FontSize="16" HorizontalAlignment="Left"
+                     Height="35" Margin="71,-30,0,0" Padding="5"
+                     TextWrapping="Wrap" Text="{Binding Path=optionB}"
+                     VerticalAlignment="Top" Width="279"/>
+            <Label FontFamily ="Arial" FontSize="16" 
+                   Content="C:" HorizontalAlignment="Left" 
+                   Margin="40,20,0,0" VerticalAlignment="Top"/>
+            <CheckBox Content="" x:Name="Chbx_C" IsChecked="False"
+                      HorizontalAlignment="Left" 
+                      Margin="15,-22,0,0" VerticalAlignment="Top" 
+                      Height="23"/>
 
-        <CheckBox Content="" Name="Cbx_D" 
+            <TextBox Name="OptionC" FontFamily ="Arial" 
+                     FontSize="16" HorizontalAlignment="Left" Padding="5"
+                     Height="35" TextWrapping="Wrap" Text="{Binding Path=optionC}"
+                     VerticalAlignment="Top" Width="279" Margin="71,-30,0,0" />
+
+            <Label FontFamily ="Arial" FontSize="16" 
+                   Content="D:" HorizontalAlignment="Left" 
+                   Margin="40,20,0,0" VerticalAlignment="Top"/>
+
+            <CheckBox Content="" x:Name="Chbx_D" IsChecked="False"
                   HorizontalAlignment="Left" 
-                  Margin="16,462,0,0" VerticalAlignment="Top" 
+                  Margin="15,-22,0,0" VerticalAlignment="Top" 
                   Height="23"/>
 
+            <TextBox Name="OptionD" FontFamily ="Arial" FontSize="16"
+                     HorizontalAlignment="Left" Height="35" Padding="5"
+                     Margin="71,-30,0,0" TextWrapping="Wrap"
+                     VerticalAlignment="Top" 
+                     Width="279"/>
+        </StackPanel>
 
-        <TextBox Name="OptionC" FontFamily ="Arial" 
-                 FontSize="16" HorizontalAlignment="Left" 
-                 Height="35" Margin="71,395,0,0" 
-                 TextWrapping="Wrap" 
-                 VerticalAlignment="Top" Width="279"/>
-        <TextBox Name="OptionD" FontFamily ="Arial" FontSize="16"
-                 HorizontalAlignment="Left" Height="35" 
-                 Margin="71,456,0,0" TextWrapping="Wrap"
-                 VerticalAlignment="Top" 
-                 Width="279"/>
-        <Label FontFamily ="Arial" FontSize="16" 
-               Content="Correct Option:" 
-               HorizontalAlignment="Left" Margin="16,536,0,0" 
-               VerticalAlignment="Top" Width="121"/>
-        <TextBox Name="CorrectAnswer" FontFamily ="Arial"
-                 FontSize="16" HorizontalAlignment="Left" 
-                 Height="35" Margin="142,536,0,0" 
-                 TextWrapping="Wrap" 
-                 VerticalAlignment="Top" Width="142"/>
         <Button Name="Btn_SaveQuestion" FontSize="16" FontFamily="Arial"
-                Content="Save" 
-                HorizontalAlignment="Left" Margin="195,599,0,0"
-                VerticalAlignment="Top" Width="80" Padding="10"
-                Click="Btn_SaveQuestion_Click" Height="40"/>
-        <Button Name="Btn_Cancel" Content="Cancel" FontSize="16" FontFamily="Arial"
-                HorizontalAlignment="Left" Margin="294,599,0,0" 
-                VerticalAlignment="Top" Width="80" Height="40" Padding="10"
-                Click="Btn_Cancel_Click"/>
+                Content="Save" BorderBrush="White" Background="#448AFF"
+                HorizontalAlignment="Left" Margin="285,595,0,0"
+                VerticalAlignment="Top" Width="90" Padding="10"
+                Click="Btn_SaveQuestion_Click" Height="40" RenderTransformOrigin="1.248,0.52"/>
 
+        <Button Name="Btn_BackToManageQues" Content="" FontSize="16" 
+                FontFamily="Arial" 
+                HorizontalAlignment="Left" Margin="10,5,0,0" 
+                VerticalAlignment="Top" Width="35" Height="40" Padding="10"
+                Click="Btn_BackToManageQues_Click" BorderBrush="{x:Null}" >
+            <Button.Background>
+                <ImageBrush ImageSource="image/Back-Arrow-Icon.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

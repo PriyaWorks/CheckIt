@@ -21,6 +21,7 @@ namespace CheckIt
     /// </summary>
     public partial class Settings : Window
     {
+        int time = 0;
         public Settings()
         {
             InitializeComponent();
@@ -48,6 +49,7 @@ namespace CheckIt
         {
             var topicnames = DbUtility.ReadXml<ObservableCollection<Topic>>("Topics.xml");
             TopicNames.ItemsSource = topicnames;
+
         }
 
         private void Btn_cancelWin_Click(object sender, RoutedEventArgs e)
@@ -69,12 +71,12 @@ namespace CheckIt
 
         private void MenuItem_Setting_Click(object sender, RoutedEventArgs e)
         {
-            var mainwindow = new MainWindow();
-            mainwindow.Close();
+           /* var mainwindow = new MainWindow();
+            mainwindow.Close();*/
 
             var settings = new Settings();
             settings.Show();
-            this.Close();
+           
         }
 
         private void MenuItem_ViewResult_Click(object sender, RoutedEventArgs e)

@@ -15,7 +15,11 @@ namespace CheckIt
         public string optionB { get; set; }
         public string optionC { get; set; }
         public string optionD { get; set; }
-        public string corectionAnswer { get; set; }
+        //public string corectionAnswer { get; set; }
+        public string optionAStatus { get; set; }
+        public string optionBStatus { get; set; }
+        public string optionCStatus { get; set; }
+        public string optionDStatus { get; set; }
         public string questionCode { get; set; }
     }
 

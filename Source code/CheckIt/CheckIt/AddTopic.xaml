@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CheckIt"
         mc:Ignorable="d"
-        Title="AddTopic" Height="216.4" Width="300">
+        Title="AddTopic" Height="206.4" Width="248.2">
     <Grid>
         <Label FontFamily ="Arial" FontSize="18" Padding="10"
                Content="Add Topic" HorizontalAlignment="Left"
                Margin="10,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.484,1.604" Width="113" Height="40"/>
 
         <TextBox FontFamily ="Arial" FontSize="16" Name="TopicName"
-                 HorizontalAlignment="Left" Height="45" Padding="10"
+                 HorizontalAlignment="Left" Height="45" Padding="5"
                  Margin="20,70,0,0" TextWrapping="Wrap"  
-                 VerticalAlignment="Top" Width="250" 
+                 VerticalAlignment="Top" Width="200" 
                  RenderTransformOrigin="0.598,-0.478"/>
-        <Button Name="Btn_AddTopic" Content="Add Topic" 
+        <Button Name="Btn_AddTopic" Content="Add" 
                 HorizontalAlignment="Left" FontFamily ="Arial" FontSize="16" 
-                Margin="170,130,0,0" Padding="10"
+                Margin="155,128,0,0" Padding="5"
                 VerticalAlignment="Top"
-                Width="100" Click="Btn_AddTopic_Click" 
-              
-                Height="40"/>
+                Width="65" Click="Btn_AddTopic_Click" 
+                 BorderBrush="White" Background="#448AFF"
+                Height="30"/>
     </Grid>
 </Window>

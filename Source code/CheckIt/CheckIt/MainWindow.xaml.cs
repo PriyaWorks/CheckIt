@@ -23,7 +23,8 @@ namespace CheckIt
     public partial class MainWindow : Window
     {
         int comboSelectedItemId = 0;
-
+        string questioncode;
+        string time = "3:00";
         public MainWindow()
         {
             InitializeComponent();
@@ -32,6 +33,8 @@ namespace CheckIt
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            timer.Text = time;
+
             // to fetch the Topic name and display in the topic list baox
             List<string> topic = new List<string>();
             XmlDocument doc = new XmlDocument();
@@ -56,11 +59,31 @@ namespace CheckIt
             }
         }
 
-        private void Btn_StartCheckIt_Click(object sender, RoutedEventArgs e)
+        private void Lbx_Questionlist_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string val = "";
             var question = new Question();
             question = (Question)Lbx_Questionlist.SelectedItem;
+            questioncode = question.questionCode;
+            var viewresult = new ViewResult(questioncode);
+            viewresult.Show();
+            this.Close();
+
+
+        }
+
+        private void Btn_StartCheckIt_Click(object sender, RoutedEventArgs e)
+        {
+
+           /* string val = "";
+            var question = new Question();
+            question = (Question)Lbx_Questionlist.SelectedItem;
+            string quest = Convert.ToString(question);
+            if (string.IsNullOrEmpty(quest))
+            {
+                MessageBox.Show("Please select Question to Start CheckIT");
+            }
+            else
+            {
             string id = question.questionId;
             //MessageBox.Show(id);
 
@@ -78,7 +101,7 @@ namespace CheckIt
             switch (result)
             {
                 case MessageBoxResult.Yes:
-                    var studentPage = new Student();
+                    var studentPage = new StudentCheckIt();
                     studentPage.Show();
                     break;
 
@@ -88,6 +111,7 @@ namespace CheckIt
                     break;
 
             }
+        }*/
         }
 
         private void MenuItem_ManageQuestions_Click(object sender, RoutedEventArgs e)
@@ -112,14 +136,28 @@ namespace CheckIt
 
         private void MenuItem_ViewResult_Click(object sender, RoutedEventArgs e)
         {
-            var mainwindow = new MainWindow();
-            mainwindow.Close();
+            if (string.IsNullOrEmpty(questioncode))
+            {
+                MessageBox.Show("Please selecT Question to view Result");
+            }
+            else
+            {
 
-            /*var viewresult = new ViewResult();
-            viewresult.Show();
-            this.Close();*/
+                var viewresult = new ViewResult(questioncode);
+                viewresult.Show();
+                this.Close();
+            }
+
         }
 
-       
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
