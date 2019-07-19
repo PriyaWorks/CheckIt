@@ -23,7 +23,7 @@ namespace CheckIt
     public partial class ViewResult : Window
     {
         int time;
-       // int comboselecteditemId = 0;
+        // int comboselecteditemId = 0;
         string questionCode;
         string topicid;
         public ViewResult(string questioncode)
@@ -35,11 +35,11 @@ namespace CheckIt
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //((PieSeries)mcChart.Series[0]).ItemsSource = new KeyValuePair<string, int>[]{
-            //new KeyValuePair<string, int>("Passed", 50),
-            //new KeyValuePair<string, int>("Failed", 50) };
+            //    //((PieSeries)mcChart.Series[0]).ItemsSource = new KeyValuePair<string, int>[]{
+            //    //new KeyValuePair<string, int>("Passed", 50),
+            //    //new KeyValuePair<string, int>("Failed", 50) };
 
-           
+
             int Failed = 0;
             int Passed = 0;
             int Count = 0;
@@ -58,7 +58,7 @@ namespace CheckIt
                     int topicidas = Convert.ToInt32(topicids) + 1;
                     topicid = Convert.ToString(topicidas);
                 }
-            
+
             XmlDocument xydocum = new XmlDocument();
             xydocum.Load("Questions.xml");
             foreach (XmlNode xn in xdocum.SelectNodes("ArrayOfQuestion/Question"))
@@ -86,9 +86,9 @@ namespace CheckIt
                         stk_CorrectAnswer.DataContext = xn.SelectSingleNode("optionD").InnerText;
                     }
                 }
-      
+
             var topicdata = DbUtility.ReadXml<ObservableCollection<Topic>>("Topics.xml");
-            var topic = from tn in topicdata where tn.topicId .Equals(topicid) select tn;
+            var topic = from tn in topicdata where tn.topicId.Equals(topicid) select tn;
             {
                 stk_topic.DataContext = topic;
             }
@@ -144,7 +144,7 @@ namespace CheckIt
             TotalPassed.Text = Passed.ToString();
         }
 
-        
+
 
         /*private void Cbx_TopicList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -158,45 +158,41 @@ namespace CheckIt
             }
         }*/
 
-        private void QuestionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-        }
+        //private void QuestionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
 
-        private void Btn_BackMainWindow_Click(object sender, RoutedEventArgs e)
-        {
-            var mainwindow = new MainWindow();
-            mainwindow.Show();
-            this.Close();
-        }
+        //}
+
+
 
         private void Btn_StartQuestion_Click(object sender, RoutedEventArgs e)
         {
-          string  times = timer.Text;
+            string times = timer.Text;
             int time = Convert.ToInt32(times);
 
             string val = "";
-               XmlDocument doc = new XmlDocument();
-                doc.Load("Questions.xml");
-                foreach (XmlNode x in doc.SelectNodes("ArrayOfQuestion/Question"))
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Questions.xml");
+            foreach (XmlNode x in doc.SelectNodes("ArrayOfQuestion/Question"))
 
-                    if (x.SelectSingleNode("questionCode").InnerText == questionCode)
-                    {
-                        val = x.SelectSingleNode("questionCode").InnerText;
-                    }
+                if (x.SelectSingleNode("questionCode").InnerText == questionCode)
+                {
+                    DisplayCode.Text  = x.SelectSingleNode("questionCode").InnerText;
 
-            DisplayCode.Text = questionCode;
+                }
+
+            // DisplayCode.Text = questionCode;
             var studentPage = new StudentCheckIt(time);
             studentPage.Show();
-           
+
 
             //MessageBoxResult result = System.Windows.MessageBox.Show("The Question code is " + val + ". Do you want to start the question? ", "Start Question", MessageBoxButton.YesNo);
 
             //switch (result)
             //{
             //    case MessageBoxResult.Yes:
-            //   
-            //        var studentPage = new StudentCheckIt();
+
+            //        var p = new StudentCheckIt(time);
             //        studentPage.Show();
             //        break;
 
@@ -205,7 +201,18 @@ namespace CheckIt
             //        mainwindow.Show();
             //        break;
 
+            //}
+
+
         }
+
+        private void Btn_BackToManageQuestion_Click(object sender, RoutedEventArgs e)
+        {
+            var mainwindow = new MainWindow();
+            mainwindow.Show();
+        }
+
+       
     }
-        }
+}
 

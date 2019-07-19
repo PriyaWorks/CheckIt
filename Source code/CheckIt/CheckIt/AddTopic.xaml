@@ -12,16 +12,16 @@
                Margin="10,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.484,1.604" Width="113" Height="40"/>
 
         <TextBox FontFamily ="Arial" FontSize="16" Name="TopicName"
-                 HorizontalAlignment="Left" Height="45" Padding="5"
+                 HorizontalAlignment="Left" Height="45" Padding="10"
                  Margin="20,70,0,0" TextWrapping="Wrap"  
-                 VerticalAlignment="Top" Width="200" 
+                 VerticalAlignment="Top" Width="180" 
                  RenderTransformOrigin="0.598,-0.478"/>
         <Button Name="Btn_AddTopic" Content="Add" 
                 HorizontalAlignment="Left" FontFamily ="Arial" FontSize="16" 
-                Margin="155,128,0,0" Padding="5"
-                VerticalAlignment="Top"
+                Margin="135,120,0,0" Padding="5"
+                VerticalAlignment="Top" Foreground="White"
                 Width="65" Click="Btn_AddTopic_Click" 
-                 BorderBrush="White" Background="#448AFF"
+                 BorderBrush="White" Background="#212121"
                 Height="30"/>
     </Grid>
 </Window>

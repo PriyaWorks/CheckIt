@@ -3,113 +3,141 @@
   <Question>
     <topicId>1</topicId>
     <questionId>1</questionId>
-    <questionDesc>The human eye isolates shapes from backgrounds</questionDesc>
-    <optionA>Figure/Ground</optionA>
-    <optionB>Proximity</optionB>
-    <optionC>Continuation</optionC>
-    <optionD>Closure</optionD>
-    <optionAStatus>True</optionAStatus>
-    <optionBStatus>False</optionBStatus>
+    <questionDesc>Displayed information can be differentiated exactly </questionDesc>
+    <optionA>Legibility</optionA>
+    <optionB>Distinctness</optionB>
+    <optionC>Consistency</optionC>
+    <optionD>Compactness</optionD>
+    <optionAStatus>False</optionAStatus>
+    <optionBStatus>True</optionBStatus>
     <optionCStatus>False</optionCStatus>
     <optionDStatus>False</optionDStatus>
-    <questionCode>4775</questionCode>
+    <questionCode>5122</questionCode>
   </Question>
   <Question>
     <topicId>1</topicId>
     <questionId>2</questionId>
-    <questionDesc>Three dimensioinal objects is also known from diiferent angles so that one can form the spatial idea </questionDesc>
-    <optionA>Legibilty</optionA>
+    <questionDesc>Three dimensioinal objects is also known from diiferent angles so that one can form the spatial idea</questionDesc>
+    <optionA>Legibility</optionA>
     <optionB>Distinctness</optionB>
     <optionC>Consistency</optionC>
-    <optionD>Comprehensibilty</optionD>
+    <optionD>Comprehensibility</optionD>
     <optionAStatus>False</optionAStatus>
     <optionBStatus>False</optionBStatus>
     <optionCStatus>False</optionCStatus>
     <optionDStatus>True</optionDStatus>
-    <questionCode>5881</questionCode>
+    <questionCode>8304</questionCode>
   </Question>
   <Question>
     <topicId>1</topicId>
     <questionId>3</questionId>
-    <questionDesc>Dont change positions of dialogue elements logos and similar things on masks</questionDesc>
-    <optionA>Suitabiltiy for individualization</optionA>
-    <optionB>Suitability for Task</optionB>
-    <optionC>Conformity with user expectation</optionC>
-    <optionD>Self descriptive</optionD>
+    <questionDesc>An animated text treadmill runs at slow speed and smoothly</questionDesc>
+    <optionA>Compactness</optionA>
+    <optionB>Legibilty</optionB>
+    <optionC>Distinctness</optionC>
+    <optionD>Consistency</optionD>
     <optionAStatus>False</optionAStatus>
-    <optionBStatus>False</optionBStatus>
-    <optionCStatus>True</optionCStatus>
+    <optionBStatus>True</optionBStatus>
+    <optionCStatus>False</optionCStatus>
     <optionDStatus>False</optionDStatus>
-    <questionCode>5925</questionCode>
+    <questionCode>6814</questionCode>
   </Question>
   <Question>
     <topicId>1</topicId>
     <questionId>4</questionId>
-    <questionDesc>It is not restricted to system but also connects the applications</questionDesc>
-    <optionA>suitability for individualization</optionA>
-    <optionB>suitabiltiy for learning</optionB>
-    <optionC>error tolerance</optionC>
-    <optionD>conformity with user expection</optionD>
+    <questionDesc>User are given only that information neccessary for carrying out the task</questionDesc>
+    <optionA>Comprehensibilty</optionA>
+    <optionB>Compactness</optionB>
+    <optionC>Distinctness</optionC>
+    <optionD>Consistency</optionD>
     <optionAStatus>False</optionAStatus>
-    <optionBStatus>False</optionBStatus>
+    <optionBStatus>True</optionBStatus>
     <optionCStatus>False</optionCStatus>
-    <optionDStatus>True</optionDStatus>
-    <questionCode>1561</questionCode>
+    <optionDStatus>False</optionDStatus>
+    <questionCode>9001</questionCode>
   </Question>
   <Question>
     <topicId>1</topicId>
     <questionId>5</questionId>
-    <questionDesc>Choosing the starting point or module at the begining?</questionDesc>
-    <optionA>Self Descriptiveness</optionA>
-    <optionB>Error tolerance</optionB>
-    <optionC>Suitability for individualisation</optionC>
-    <optionD>Suitability for task</optionD>
+    <questionDesc>Information content is communicated quickly and accurately</questionDesc>
+    <optionA>Compactness</optionA>
+    <optionB>Distinctness</optionB>
+    <optionC>Clarity</optionC>
+    <optionD>Legibilty</optionD>
     <optionAStatus>False</optionAStatus>
     <optionBStatus>False</optionBStatus>
     <optionCStatus>False</optionCStatus>
     <optionDStatus>False</optionDStatus>
-    <questionCode>4103</questionCode>
+    <questionCode>4023</questionCode>
   </Question>
   <Question>
     <topicId>1</topicId>
     <questionId>6</questionId>
-    <questionDesc>Supprts the user to do his task effectivly and efficiently </questionDesc>
-    <optionA>Conformity with user expectation</optionA>
-    <optionB>Suitability for Task</optionB>
-    <optionC>Suitabiltiy for individualization. </optionC>
-    <optionD>Self descriptive</optionD>
-    <optionAStatus>False</optionAStatus>
+    <questionDesc>Information of an error is limited to the essential components</questionDesc>
+    <optionA>Compactness</optionA>
+    <optionB>Distinctness</optionB>
+    <optionC>Clarity</optionC>
+    <optionD>Legibilty</optionD>
+    <optionAStatus>True</optionAStatus>
     <optionBStatus>False</optionBStatus>
     <optionCStatus>False</optionCStatus>
     <optionDStatus>False</optionDStatus>
-    <questionCode>4792</questionCode>
+    <questionCode>3256</questionCode>
   </Question>
   <Question>
     <topicId>1</topicId>
     <questionId>7</questionId>
-    <questionDesc>User Preventive ways to help input values </questionDesc>
-    <optionA>Error tolerance</optionA>
-    <optionB>Suitabiltiy for individualization</optionB>
-    <optionC>Suitability for Task</optionC>
-    <optionD>Conformity with user expectation</optionD>
-    <optionAStatus>True</optionAStatus>
-    <optionBStatus>True</optionBStatus>
-    <optionCStatus>True</optionCStatus>
+    <questionDesc>Attention of user is directed to the required information </questionDesc>
+    <optionA>Compactness</optionA>
+    <optionB>Distinctness</optionB>
+    <optionC>Clarity</optionC>
+    <optionD>Recognizability</optionD>
+    <optionAStatus>False</optionAStatus>
+    <optionBStatus>False</optionBStatus>
+    <optionCStatus>False</optionCStatus>
     <optionDStatus>True</optionDStatus>
-    <questionCode>6059</questionCode>
+    <questionCode>8437</questionCode>
   </Question>
   <Question>
     <topicId>1</topicId>
     <questionId>8</questionId>
-    <questionDesc>Neccessary functionalities available </questionDesc>
-    <optionA>Conformity with user expectation</optionA>
-    <optionB>Self descriptive</optionB>
-    <optionC>Suitability for Task</optionC>
-    <optionD>Ssuitabiltiy for individualization</optionD>
-    <optionAStatus>False</optionAStatus>
+    <questionDesc>In describing parts of a whole different colors are used</questionDesc>
+    <optionA>Clarity</optionA>
+    <optionB>Recognizability</optionB>
+    <optionC>Compactness</optionC>
+    <optionD>Legibility</optionD>
+    <optionAStatus>True</optionAStatus>
     <optionBStatus>False</optionBStatus>
     <optionCStatus>False</optionCStatus>
     <optionDStatus>False</optionDStatus>
-    <questionCode>6442</questionCode>
+    <questionCode>8123</questionCode>
+  </Question>
+  <Question>
+    <topicId>2</topicId>
+    <questionId>9</questionId>
+    <questionDesc>Choosing the starting point or module at the begining</questionDesc>
+    <optionA>Suitability for task</optionA>
+    <optionB>Suitability for individualisation</optionB>
+    <optionC>Error tolerance</optionC>
+    <optionD>Self Descriptiveness</optionD>
+    <optionAStatus>False</optionAStatus>
+    <optionBStatus>True</optionBStatus>
+    <optionCStatus>False</optionCStatus>
+    <optionDStatus>False</optionDStatus>
+    <questionCode>1560</questionCode>
+  </Question>
+  <Question>
+    <topicId>2</topicId>
+    <questionId>10</questionId>
+    <questionDesc>Only task-related No system-related activites</questionDesc>
+    <optionA>Suitability for the task</optionA>
+    <optionB>Error tolerance</optionB>
+    <optionC>Suitability for individualisation</optionC>
+    <optionD>Self descriptiveness</optionD>
+    <optionAStatus>True</optionAStatus>
+    <optionBStatus>False</optionBStatus>
+    <optionCStatus>False</optionCStatus>
+    <optionDStatus>False</optionDStatus>
+    <questionCode>1667</questionCode>
   </Question>
 </ArrayOfQuestion>

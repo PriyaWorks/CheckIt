@@ -6,14 +6,13 @@
         xmlns:local="clr-namespace:CheckIt"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Title="CheckIt" Height="700" Width="400">
+        Title="CheckIt" Height="650" Width="400">
     <Grid>
-        <Rectangle Fill="#448AFF" HorizontalAlignment="Left" 
-                   Height="50" Stroke="White" 
-                   VerticalAlignment="Top" Width="400"/>
+        <Rectangle Fill="#212121" HorizontalAlignment="Left" Height="50" 
+                   Stroke="White" VerticalAlignment="Top" Width="400" Grid.ColumnSpan="2" Margin="0,0,-6.4,0"/>
         <Label FontFamily ="Arial" FontSize="26" Content="CheckIT" Padding="10"
                HorizontalAlignment="Left" Margin="132,0,0,0" Foreground="White"
-               VerticalAlignment="Top" Height="50" Width="129"/>
+               VerticalAlignment="Top" Height="50" Width="129" Grid.ColumnSpan="2"/>
         <Label FontFamily ="Arial" FontSize="20" 
                Content="Question Detail" 
                HorizontalAlignment="Left" Margin="10,65,0,0" 
@@ -36,7 +35,7 @@
 
 
 
-        <StackPanel Name="stk_QuestionDetails" Margin="0,180,-0.4,95.4">
+        <StackPanel Name="stk_QuestionDetails" Margin="0,180,-0.4,65">
             <TextBox Name="Question" FontFamily ="Arial" Padding="5"
                      FontSize="16" HorizontalAlignment="Left" 
                      Height="145" TextWrapping="Wrap" 
@@ -106,21 +105,23 @@
 
         </StackPanel>
         <Button Name="Btn_SaveQuestion" FontSize="16" FontFamily="Arial"
-                Content="Save" 
-                HorizontalAlignment="Left" Margin="195,599,0,0"
-                VerticalAlignment="Top" Width="80" Padding="10"
-                Click="Btn_SaveQuestion_Click" Height="40" BorderBrush="White" Background="#448AFF"/>
+                Content="Save" Foreground="White"
+                HorizontalAlignment="Left" Margin="191,560,0,0"
+                VerticalAlignment="Top" Width="80" Padding="5"
+                Click="Btn_SaveQuestion_Click" Height="40" BorderBrush="White" Background="#212121"/>
         <Button Name="Btn_DeleteQuestion" Content="Delete" FontSize="16" FontFamily="Arial"
-                HorizontalAlignment="Left" Margin="294,599,0,0" 
-                VerticalAlignment="Top" Width="80" Height="40" Padding="10"
-                Click="Btn_DeleteQuestion_Click" BorderBrush="White" Background="#448AFF"/>
+                HorizontalAlignment="Left" Margin="290,560,0,0" 
+                VerticalAlignment="Top" Width="80" Height="40" Padding="5" Foreground="White"
+                Click="Btn_DeleteQuestion_Click" BorderBrush="White" Background="#212121"/>
+
+
         <Button Name="Btn_BackToManageQues" Content="" FontSize="16" 
                 FontFamily="Arial"
                 HorizontalAlignment="Left" Margin="10,5,0,0" 
                 VerticalAlignment="Top" Width="35" Height="40" Padding="10"
                 Click="Btn_BackToManageQues_Click" BorderBrush="{x:Null}" >
             <Button.Background>
-                <ImageBrush ImageSource="image/Back-Arrow-Icon.png"/>
+                <ImageBrush ImageSource="image/left.jpg"/>
             </Button.Background>
         </Button>
 

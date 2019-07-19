@@ -90,7 +90,7 @@ namespace CheckIt
         {
             var manageQues = new ManageQuestion();
             manageQues.Show();
-            this.Close();
+            
         }
 
         private void Btn_DeleteQuestion_Click(object sender, RoutedEventArgs e)

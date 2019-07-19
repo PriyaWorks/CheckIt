@@ -33,22 +33,34 @@ namespace CheckIt
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
             InputBox.Visibility = System.Windows.Visibility.Visible;
-            times = time*60;
+            times = time * 60;
         }
 
         private void Dt_Tick(object sender, EventArgs e)
         {
-            times--;
-            timeValue.Content = times.ToString();
+            if (times != 0)
+            {
+                times--;
+                timeValue.Content = times.ToString();
+            }
+            else
+            {
+                DispatcherTimer dt = new DispatcherTimer();
+                dt.Stop();
+            }
+           
+               
         }
 
         private void Btn_Start_Click(object sender, RoutedEventArgs e)
         {
-           // Count down timer logic
+            // Count down timer logic
             DispatcherTimer dt = new DispatcherTimer();
             dt.Interval = new TimeSpan(0, 0, 0, 1);
             dt.Tick += Dt_Tick;
             dt.Start();
+           
+            
 
             //Enter quiz code screen logic
             InputBox.Visibility = System.Windows.Visibility.Collapsed;
@@ -74,7 +86,7 @@ namespace CheckIt
             var topicdata = DbUtility.ReadXml<ObservableCollection<Topic>>("Topics.xml");
             var topic = from tn in topicdata where tn.topicId.Equals(topicid) select tn;
             {
-                Stk_TopicName.DataContext = topic;
+                stk_topic.DataContext = topic;
             }
 
         }
@@ -152,9 +164,11 @@ namespace CheckIt
                 }
         }
 
-        
-    }
-}
+                   
+                }
+        }
+    
+
 
        
     

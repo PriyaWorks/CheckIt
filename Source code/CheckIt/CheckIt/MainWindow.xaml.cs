@@ -33,7 +33,7 @@ namespace CheckIt
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            timer.Text = time;
+            //timer.Text = time;
 
             // to fetch the Topic name and display in the topic list baox
             List<string> topic = new List<string>();
@@ -134,7 +134,7 @@ namespace CheckIt
             this.Close();
         }
 
-        private void MenuItem_ViewResult_Click(object sender, RoutedEventArgs e)
+        /*private void MenuItem_ViewResult_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(questioncode))
             {
@@ -148,7 +148,7 @@ namespace CheckIt
                 this.Close();
             }
 
-        }
+        }*/
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {

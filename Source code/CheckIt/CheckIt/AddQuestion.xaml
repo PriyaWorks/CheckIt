@@ -7,14 +7,22 @@
         mc:Ignorable="d"
         Loaded="Window_Loaded"
         
-        Title="CheckIt" Height="700" Width="400">
+        Title="CheckIt" Height="650" Width="400">
     <Grid>
-        <Rectangle Fill="#448AFF" HorizontalAlignment="Left" 
-                   Height="50" Stroke="White" 
-                   VerticalAlignment="Top" Width="400"/>
+        <Rectangle Fill="#212121" HorizontalAlignment="Left" Height="50" 
+                   Stroke="White" VerticalAlignment="Top" Width="400" Grid.ColumnSpan="2" Margin="0,0,-6.4,0"/>
         <Label FontFamily ="Arial" FontSize="26" Content="CheckIT" Padding="10"
                HorizontalAlignment="Left" Margin="132,0,0,0" Foreground="White"
-               VerticalAlignment="Top" Height="50" Width="129"/>
+               VerticalAlignment="Top" Height="50" Width="129" Grid.ColumnSpan="2"/>
+        <Button Name="Btn_BackMainWindow" Content="" FontSize="16" 
+                FontFamily="Arial"
+                HorizontalAlignment="Left" Margin="10,5,0,0" 
+                VerticalAlignment="Top" Width="35" Height="40" Padding="10"
+                Click="Btn_BackMainWindow_Click" BorderBrush="{x:Null}" >
+            <Button.Background>
+                <ImageBrush ImageSource="image/left.jpg"/>
+            </Button.Background>
+        </Button>
         <Label FontFamily ="Arial" FontSize="20" 
                Content="Add Question" 
                HorizontalAlignment="Left" Margin="10,65,0,0" 
@@ -35,7 +43,7 @@
             </TextBlock>
         </StackPanel>
 
-        <StackPanel Name="stk_QuestionDetails" Margin="0,180,-0.4,95.4">
+        <StackPanel Name="stk_QuestionDetails" Margin="0,180,-0.4,64.2">
             <TextBox FontFamily="Arial" FontSize="16"
                  Margin="15,0,15,0" Padding="5" Name="QuestionDesciption"
                  TextWrapping="Wrap"   Height="145"               
@@ -120,20 +128,12 @@
         </StackPanel>
 
         <Button Name="Btn_SaveQuestion" FontSize="16" FontFamily="Arial"
-                Content="Save" BorderBrush="White" Background="#448AFF"
-                HorizontalAlignment="Left" Margin="285,595,0,0"
-                VerticalAlignment="Top" Width="90" Padding="10"
+                Content="Save" BorderBrush="White" Background="#212121"
+                HorizontalAlignment="Left" Margin="275.4,570.4,0,0"
+                VerticalAlignment="Top" Width="90" Padding="5" Foreground="White"
                 Click="Btn_SaveQuestion_Click" Height="40" RenderTransformOrigin="1.248,0.52"/>
 
-        <Button Name="Btn_BackToManageQues" Content="" FontSize="16" 
-                FontFamily="Arial" 
-                HorizontalAlignment="Left" Margin="10,5,0,0" 
-                VerticalAlignment="Top" Width="35" Height="40" Padding="10"
-                Click="Btn_BackToManageQues_Click" BorderBrush="{x:Null}" >
-            <Button.Background>
-                <ImageBrush ImageSource="image/Back-Arrow-Icon.png"/>
-            </Button.Background>
-        </Button>
+        
 
     </Grid>
 </Window>

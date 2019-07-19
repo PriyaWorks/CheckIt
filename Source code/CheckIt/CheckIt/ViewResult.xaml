@@ -8,36 +8,36 @@
          Loaded="Window_Loaded"
         xmlns:DV="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
-        Title="Result" Height="700" Width="400">
+        Title="CheckIt" Height="650" Width="400">
     <Grid>
-        <Rectangle Fill="#448AFF" HorizontalAlignment="Left" Height="50" 
-                   Stroke="White" VerticalAlignment="Top" Width="400"/>
-        <Label FontFamily ="Arial" FontSize="26" Content="CheckIT" 
+
+        <Rectangle Fill="#212121" HorizontalAlignment="Left" Height="50" 
+                   Stroke="White" VerticalAlignment="Top" Width="400" Grid.ColumnSpan="2" Margin="0,0,-6.4,0"/>
+        <Label FontFamily ="Arial" FontSize="26" Content="CheckIT" Padding="10"
                HorizontalAlignment="Left" Margin="132,0,0,0" Foreground="White"
-               VerticalAlignment="Top" Height="50" Width="129"/>
+               VerticalAlignment="Top" Height="50" Width="129" Grid.ColumnSpan="2"/>
 
 
-        <StackPanel Name='stk_topic' Margin="10,55,49.6,575.4">
-
-            <TextBlock Name="Txtbl_TopicName" Text="{Binding topicName}" Height="25" Padding="5" FontSize="16"
-                   Margin="10,5,0,0" HorizontalAlignment="Left"
-                   VerticalAlignment="Top" Width="200"/>
+        <StackPanel Name='stk_topic' Margin="18,55,28.6,505" >
+            <TextBlock Name="Txtbl_TopicName" Text="{Binding topicName}" Height="40" Padding="5" FontSize="16"
+                    HorizontalAlignment="Left"
+                   VerticalAlignment="Top" Width="190" Margin="3,7,0,0"/>
         </StackPanel>
-        <StackPanel Name="stk_QuestionDetails" Margin="10,100,9.6,490.4">
+
+
+        <StackPanel Name="stk_QuestionDetails" Margin="21,120,28.6,435">
             <TextBlock Name="Txtbl_Question" FontFamily ="Arial" Padding="7"
                      FontSize="16" HorizontalAlignment="Left" 
-                     Height="85" TextWrapping="Wrap" 
+                     Height="65" TextWrapping="Wrap" 
                      Text="{Binding questionDesc}" 
-                     VerticalAlignment="Top" Margin="10,0,-2.6,0"
-                     Width="367" />
+                     VerticalAlignment="Top" 
+                     Width="344" />
         </StackPanel>
-        <StackPanel Name="stk_CorrectAnswer" Height="55" Margin="0,185,-0.4,0" VerticalAlignment="Top">
-            <Label FontFamily ="Arial" FontSize="16" Content="Answer:" 
-               HorizontalAlignment="Left" Margin="25,15,0,0" 
-               VerticalAlignment="Top" Height="30" Width="75"/>
-            <TextBlock Name="Txtbl_Answer" Text="{Binding }" FontFamily ="Arial" Height="28" Padding="5" 
-                   Margin="105,-28,0,0" HorizontalAlignment="Left" FontSize="16"
+        <StackPanel Name="stk_CorrectAnswer" Height="40" Margin="21,205,58.6,0" VerticalAlignment="Top">
+            <TextBlock Name="Txtbl_Answer" Text="{Binding }" FontFamily ="Arial" Height="35" Padding="5" 
+                    HorizontalAlignment="Left" FontSize="16" FontWeight="Bold"
                    VerticalAlignment="Top" Width="279"/>
+
         </StackPanel>
         <!--<DVC:Chart 
                    Background="AntiqueWhite" Name="StudentResult" Margin="0,240,0,130.4" HorizontalAlignment="Left" Width="384">
@@ -48,57 +48,58 @@
                 </DVC:PieSeries>
             </DVC:Chart.Series>
         </DVC:Chart>-->
-        <StackPanel Name="stk_N0Result" Margin="0,240,9.6,130.4">
-            <Rectangle  HorizontalAlignment="Left" Height="270" Margin="10,6,0,10" Stroke="Black" VerticalAlignment="Top" Width="364"/>
-            <Label FontFamily ="Arial" Width="180"
-               FontSize="16" Padding="5" Margin="17,-489,177,0" Content="Result:" Height="40"/>
+        <StackPanel Name="stk_N0Result" Margin="0,265,9.6,175">
+            <Label FontFamily ="Arial" FontWeight="Bold"
+               FontSize="16" Padding="5"  Content="Result" Height="35" Margin="21,10,284,0"/>
             <Label FontFamily ="Arial"
-               FontSize="16" Padding="5" Margin="17,-400,177,0"  Content="Total Students attempts:" Height="40" Width="180"/>
-            <TextBlock Margin="214,-402,109,0" FontFamily ="Arial" Name="TotalStudent"
-               FontSize="16" Padding="5" Height="40"/>
-            <Label FontFamily ="Arial" Height="40" Width="180"
-               FontSize="16" Padding="5" Margin="17,-330,177,0"  Content="No. of Passed students:"/>
-            <TextBlock Margin="199,-330,109,0" FontFamily ="Arial" Name="TotalPassed"
-               FontSize="16" Padding="5" Height="40" Width="50"/>
-            <Label FontFamily ="Arial" Width="180"
-               FontSize="16" Padding="5" Margin="17,-250,177,0"  Content="No. of Failed students:" Height="40"/>
-            <TextBlock FontFamily ="Arial" Name="TotalFailed" Width="50"
-               FontSize="16" Padding="5" Margin="199,-250,177,0" Height="40"/>
+               FontSize="16" Padding="5" Margin="21,5,229,0"  Content="No. of Students:" Height="40" />
+            <TextBlock FontFamily ="Arial" x:Name="TotalStudent"
+               FontSize="16" Padding="5" Height="40" Margin="160,-44,159,0"/>
+            <Label FontFamily ="Arial" Height="40" Margin="21,-1,222,0"
+               FontSize="16" Padding="5"  Content="Passed Students:"/>
+            <TextBlock  FontFamily ="Arial" x:Name="TotalPassed" Margin="160,-48,159,0"
+               FontSize="16" Padding="5" Height="31"/>
+            <Label FontFamily ="Arial" Margin="21,-1,229,0"
+               FontSize="16" Padding="5"  Content="Failed Students:" Height="40"/>
+            <TextBlock FontFamily ="Arial" x:Name="TotalFailed"  Margin="160,-50,159,0"
+               FontSize="16" Padding="5"  Height="40" Width="50"/>
         </StackPanel>
 
-        <Button Name="Btn_BackMainWindow" Content="" FontSize="16" 
+        <Button Name="Btn_BackToManageQuestion" Content="" FontSize="16" 
                 FontFamily="Arial"
                 HorizontalAlignment="Left" Margin="10,5,0,0" 
                 VerticalAlignment="Top" Width="35" Height="40" Padding="10"
-                Click="Btn_BackMainWindow_Click" BorderBrush="{x:Null}" >
+                Click="Btn_BackToManageQuestion_Click" BorderBrush="{x:Null}" >
             <Button.Background>
-                <ImageBrush ImageSource="image/Back-Arrow-Icon.png"/>
+                <ImageBrush ImageSource="image/left.jpg"/>
             </Button.Background>
         </Button>
         <Label Content="Time:" FontFamily ="Arial"
-               FontSize="20" HorizontalAlignment="Left" Padding="5"
-               Margin="15,0,0,65.4" VerticalAlignment="Bottom" 
-               Width="55" Height="40"/>
+               FontSize="16" HorizontalAlignment="Left" Padding="5"
+               Margin="21,0,0,110" VerticalAlignment="Bottom" 
+               Width="61" Height="40"/>
         <TextBox Name="timer" FontFamily ="Arial"
-               FontSize="20" HorizontalAlignment="Left" Padding="5"
-               Margin="75,0,0,74.4" VerticalAlignment="Bottom" 
-               Width="30" Height="30" Text="3" />
+               FontSize="16" HorizontalAlignment="Left" Padding="5"
+               Margin="70,0,0,115" VerticalAlignment="Bottom" 
+               Width="65" Height="34" Text="3" />
         <Label Content="Min" FontFamily ="Arial"
-               FontSize="20" HorizontalAlignment="Left" Padding="5"
-               Margin="115,0,0,74.4" VerticalAlignment="Bottom" 
-               Width="44" Height="30" RenderTransformOrigin="0.545,0.5"/>
-        <Button Name="Btn_StartQuestion" Content="Start" FontSize="16" 
-                FontFamily="Arial"
-                HorizontalAlignment="Right" Margin="0,0,28.6,64.4" 
+               FontSize="16" HorizontalAlignment="Left" Padding="5"
+               Margin="140,0,0,110" VerticalAlignment="Bottom" 
+               Width="44" Height="37" RenderTransformOrigin="0.45,0.987"/>
+        <Button Name="Btn_StartQuestion" Content="Start" FontSize="20" 
+                FontFamily="Arial" Foreground="White"
+                HorizontalAlignment="Right" Margin="0,0,28.6,115" 
                 VerticalAlignment="Bottom" Width="90" Height="40" Padding="5"
-                Click="Btn_StartQuestion_Click" BorderBrush="White" Background="#448AFF"/>
-        <Label FontFamily ="Arial" FontSize="20" 
-               Content="Code:" 
-               HorizontalAlignment="Left" Margin="15,0,0,15.4" 
-               VerticalAlignment="bottom" Height="35" Width="61" />
-        <StackPanel Name="Stk_DisplayCode" Margin="76,620,132.6,0.4">
-            <TextBlock FontFamily ="Arial" FontSize="20" x:Name="DisplayCode" Text="{Binding questionCode}" Height="40" Padding="5" Margin="0,0,9.8,0" HorizontalAlignment="Right"
-                   VerticalAlignment="Bottom" Width="165"/>
+                Click="Btn_StartQuestion_Click" BorderBrush="White" Background="#212121"/>
+        <Label FontFamily ="Arial" FontSize="16" Padding="5"
+               Content="Code: " FontWeight="Black"
+               HorizontalAlignment="Left" Margin="21,0,0,40" 
+               VerticalAlignment="bottom" Height="40" Width="61" />
+        <StackPanel Name="Stk_DisplayCode" Margin="87,530,132.6,35" RenderTransformOrigin="0.5,0.5">
+            
+            <TextBlock FontFamily ="Arial" FontSize="20" x:Name="DisplayCode"  Height="35" Padding="5"
+                   VerticalAlignment="Bottom"  Foreground="Green" FontWeight="Bold" Margin="1,0,0,40"  />
+
         </StackPanel>
 
     </Grid>

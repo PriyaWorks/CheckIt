@@ -40,7 +40,6 @@ F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\De
 F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\ManageQuestion.g.cs
 F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\QuestionDetail.g.cs
 F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\Settings.g.cs
-F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\Student.g.cs
 F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\StudentCheckIt.g.cs
 F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\TopicDetail.g.cs
 F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\ViewResult.g.cs
@@ -53,7 +52,6 @@ F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\De
 F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\ManageQuestion.baml
 F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\QuestionDetail.baml
 F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\Settings.baml
-F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\Student.baml
 F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\StudentCheckIt.baml
 F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\TopicDetail.baml
 F:\Masters\3.Fundamental of UX\Github\CheckIt\Source code\CheckIt\CheckIt\obj\Debug\ViewResult.baml

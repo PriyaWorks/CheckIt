@@ -16,7 +16,7 @@
                    VerticalAlignment="Top" Height="30" RenderTransformOrigin="0.484,0.833"/>
             <TextBox x:Name="TopicName" 
                      FontFamily ="Arial" 
-                     FontSize="16" Padding="5"
+                     FontSize="16" Padding="10"
                      HorizontalAlignment="Left" 
                      Height="40" TextWrapping="Wrap" 
                      Text="{Binding topicName}" 
@@ -37,12 +37,12 @@
                 Margin="160,90,0,0" FontFamily ="Arial" 
                      FontSize="16" Padding="5"
                 VerticalAlignment="Top" Height="40"
-                Width="90" BorderBrush="White" Background="#448AFF"
+                Width="90" BorderBrush="White" Background="#212121" Foreground="White"
                 Click="Btn_UpdateTopic_Click"/>
         <Button Name="Btn_DeleteTopic" Content="Delete" 
                 HorizontalAlignment="Left" FontFamily ="Arial" 
                      FontSize="16" Padding="5"
-                Margin="270,90,0,0" BorderBrush="White" Background="#448AFF"
+                Margin="270,90,0,0" BorderBrush="White" Background="#212121" Foreground="White"
                 VerticalAlignment="Top" Width="90" Height="40"
                 Click="Btn_DeleteTopic_Click"/>
     </Grid>

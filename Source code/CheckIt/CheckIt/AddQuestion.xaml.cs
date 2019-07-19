@@ -81,7 +81,7 @@ namespace CheckIt
 
                 if (string.IsNullOrEmpty(QuestionDesciption.Text) || string.IsNullOrEmpty(OptionA.Text) || string.IsNullOrEmpty(OptionB.Text) || string.IsNullOrEmpty(OptionC.Text) || string.IsNullOrEmpty(OptionD.Text) )
                 {
-                    MessageBox.Show("Please enter the vlaues in all fields");
+                    MessageBox.Show("Please enter the values in all fields");
                 }
                 else
                 
@@ -104,34 +104,39 @@ namespace CheckIt
 
         private void Btn_BackToManageQues_Click(object sender, RoutedEventArgs e)
         {
+            
+            
+        }
+
+        private void Btn_BackMainWindow_Click(object sender, RoutedEventArgs e)
+        {
             var manageQuestion = new ManageQuestion();
             manageQuestion.Show();
-            this.Close();
         }
         /*string questioncode;
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            var data = DbUtility.ReadXml<ObservableCollection<Question>>("Questions.xml");
-            var Questions = from sn in data where sn.questionCode.Equals(questionCode) select sn;
-            {
-                stk_QuestionDetails.DataContext = Questions;
-            }
-            XmlDocument xdocum = new XmlDocument();
-            xdocum.Load("Questions.xml");
-            foreach (XmlNode x in xdocum.SelectNodes("ArrayOfQuestion/Question"))
-                if (x.SelectSingleNode("questionCode").InnerText == questionCode)
-                {
-                    string topicids = x.SelectSingleNode("topicId").InnerText;
-                    int topicidas = Convert.ToInt32(topicids) + 1;
-                    topicid = Convert.ToString(topicidas);
+private void Window_Loaded(object sender, RoutedEventArgs e)
+{
+   var data = DbUtility.ReadXml<ObservableCollection<Question>>("Questions.xml");
+   var Questions = from sn in data where sn.questionCode.Equals(questionCode) select sn;
+   {
+       stk_QuestionDetails.DataContext = Questions;
+   }
+   XmlDocument xdocum = new XmlDocument();
+   xdocum.Load("Questions.xml");
+   foreach (XmlNode x in xdocum.SelectNodes("ArrayOfQuestion/Question"))
+       if (x.SelectSingleNode("questionCode").InnerText == questionCode)
+       {
+           string topicids = x.SelectSingleNode("topicId").InnerText;
+           int topicidas = Convert.ToInt32(topicids) + 1;
+           topicid = Convert.ToString(topicidas);
 
-                }
+       }
 
-            var topicdata = DbUtility.ReadXml<ObservableCollection<Topic>>("Topics.xml");
-            var topic = from tn in topicdata where tn.topicId.Equals(topicid) select tn;
-            {
-                stk_TopicName.DataContext = topic;
-            }
-        }*/
+   var topicdata = DbUtility.ReadXml<ObservableCollection<Topic>>("Topics.xml");
+   var topic = from tn in topicdata where tn.topicId.Equals(topicid) select tn;
+   {
+       stk_TopicName.DataContext = topic;
+   }
+}*/
     }
 }

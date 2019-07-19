@@ -76,9 +76,6 @@
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Student.xaml.cs">
-      <DependentUpon>Student.xaml</DependentUpon>
-    </Compile>
     <Compile Include="StudentCheckIt.xaml.cs">
       <DependentUpon>StudentCheckIt.xaml</DependentUpon>
     </Compile>
@@ -119,10 +116,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Settings.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Student.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -177,6 +170,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="image\mobile-menu-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\fa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\left.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

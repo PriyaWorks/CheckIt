@@ -5,21 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CheckIt"
         mc:Ignorable="d"
-        Title="CheckIt" Height="700" Width="400">
+        Title="CheckIt" Height="650" Width="400">
     <Grid>
-        <Rectangle Fill="#448AFF" HorizontalAlignment="Left" 
-                   Height="50" Stroke="White" 
-                   VerticalAlignment="Top" Width="400"/>
-        <Label FontFamily ="Arial" FontSize="26" Content="CheckIT" 
+        <Rectangle Fill="#212121" HorizontalAlignment="Left" Height="50" 
+                   Stroke="White" VerticalAlignment="Top" Width="400"/>
+        <Label FontFamily ="Arial" FontSize="26" Content="CheckIT" Padding="10"
                HorizontalAlignment="Left" Margin="132,0,0,0" Foreground="White"
                VerticalAlignment="Top" Height="50" Width="129"/>
 
-        <StackPanel Name="Stk_TopicName">
-            <TextBlock Name="TopicName" Text="{Binding topicName}" Height="30" Padding="5" 
-                   Margin="15,69,0,0" HorizontalAlignment="Left" FontSize="18"
-                   VerticalAlignment="Top" Width="200"/>
+        <StackPanel Name='stk_topic' Margin="18,55,28.6,505" >
+            <TextBlock Name="Txtbl_TopicName" Text="{Binding topicName}" Height="40" Padding="5" FontSize="16"
+                    HorizontalAlignment="Left"
+                   VerticalAlignment="Top" Width="190" Margin="3,7,0,0"/>
         </StackPanel>
-        <StackPanel Name="stk_QuestionDetails" Margin="0,135,-0.4,170.4">
+
+
+        <StackPanel Name="stk_QuestionDetails" Margin="0,135,-0.4,135">
             <TextBlock Name="Question" FontFamily ="Arial" Padding="7"
                      FontSize="16" HorizontalAlignment="Left" 
                      Height="85" TextWrapping="Wrap" 
@@ -89,35 +90,35 @@
 
         </StackPanel>
         <Button Name="Btn_FinishQuiz" FontSize="16" FontFamily="Arial"
-                Content="Submit" BorderBrush="White" Background="#448AFF"
-                HorizontalAlignment="Center" Margin="150,0,153.6,35.4"
-                VerticalAlignment="Bottom" Width="90" Padding="5"
+                Content="Submit" BorderBrush="White" Background="#212121" Foreground="White"
+                HorizontalAlignment="Center" Margin="132,0,161.6,10"
+                VerticalAlignment="Bottom" Width="100" Padding="5"
                 Click="Btn_FinishQuiz_Click" Height="40"/>
 
-        <Label Content="Count Down Timer:" FontFamily ="Arial"
+        <Label Content="Timer:" FontFamily ="Arial"
                FontSize="18" HorizontalAlignment="Left" Padding="5"
-               Margin="10,0,0,100.4" VerticalAlignment="Bottom" 
-               Width="165" Height="40"/>
-        <Label Name="timeValue" Content="0" FontFamily ="Arial"
+               Margin="10,0,0,71" VerticalAlignment="Bottom" 
+               Width="63" Height="35"/>
+        <Label Name="timeValue" Content="60" FontFamily ="Arial"
                FontSize="18" HorizontalAlignment="Left" Padding="5"
-               Margin="175,0,0,100.4" VerticalAlignment="Bottom" 
-               Width="45" Height="40"/>
+               Margin="73,0,0,66" VerticalAlignment="Bottom" 
+               Width="57" Height="40"/>
         <Label Content="seconds Left" FontFamily ="Arial"
                FontSize="18" HorizontalAlignment="Left" Padding="5"
-               Margin="225,0,0,100.4" VerticalAlignment="Bottom" 
-               Width="125" Height="40"/>
+               Margin="115,0,0,66" VerticalAlignment="Bottom" 
+               Width="172" Height="40"/>
 
         <!-- It's important that this is in the end of the XAML as it needs to be on top of everything else! -->
         <Grid x:Name="InputBox" Visibility="Collapsed">
             <Grid Background="#212121" />
             <Border
                     MinWidth="250"
-                    Background="#757575" 
+                    Background="#BDBDBD" 
                     BorderBrush="White"
                     BorderThickness="0" 
                     CornerRadius="0,55,0,55" 
                     HorizontalAlignment="Center" 
-                    VerticalAlignment="Center" Height="156" Margin="0,249,-0.4,265.4" 
+                    VerticalAlignment="Center" Height="156" Margin="0,200,-0.4,200" 
                     Width="394">
                 <StackPanel>
                     <Label Margin="5,20,5,0" Foreground="White" Content="Enter the Question Code to start CheckIt:" 
@@ -135,7 +136,5 @@
                 </StackPanel>
             </Border>
         </Grid>
-
-
     </Grid>
 </Window>
